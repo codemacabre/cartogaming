@@ -1,41 +1,54 @@
-@font-face {
-  font-family: 'slkscr';
-  src:  url('/slkscr.woff2') format('woff2'),
-        url('/slkscr.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'slkscrb';
-  src:  url('/slkscrb.woff2') format('woff2'),
-        url('/slkscrb.woff') format('woff');
-  font-display: swap;
-}
-
-* {
+/* RESETS */
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'slkscr';
+  src:  url('/slkscr.woff2') format('woff2'),
+        url('/slkscr.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'slkscrb';
+  src:  url('/slkscrb.woff2') format('woff2'),
+        url('/slkscrb.woff') format('woff');
+}
+
+html {
+  font-size: 24px;
 }
 
 body {
-  font-family: 'slkscr';
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  font-family: 'slkscr';
+  height: 100vh;
 }
 
 main {
+  align-items: center;
   display: flex;
   flex-grow: 1;
   justify-content: center;
-  align-items: center;
 }
 
 footer {
   margin: 0 auto;
+  p {
+    font-size: 0.8rem;
+    padding: 1rem 0;
+  }
+}
+
+.v-centered {
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,10 +56,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 1rem;
   padding: 1rem 0;
 }
