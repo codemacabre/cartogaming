@@ -25,10 +25,7 @@ const dateToNumerals = (year) => {
   ).str;
 };
 
-window.onload = () => {
-  // Insert current year in numerals
-  const date = document.querySelector('#date');
-  if (date) {
-    date.innerHTML = dateToNumerals(new Date().getFullYear());
-  }
-};
+const date = document.querySelector('#date');
+if (date) {
+  date.innerHTML = dateToNumerals(new Date().getFullYear());
+}
